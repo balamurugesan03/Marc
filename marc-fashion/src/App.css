@@ -1,0 +1,10 @@
+/* App-level styles — intentionally minimal; see index.css for global vars */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}

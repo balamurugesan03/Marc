@@ -1,0 +1,248 @@
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ─── Story ─────────────────── */
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.storyText { }
+
+.storyTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  color: var(--black);
+}
+
+.storyTitle span { color: var(--gold); }
+
+.storyDesc {
+  font-size: 0.92rem;
+  color: var(--gray);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.storyVisual { display: flex; justify-content: center; }
+
+.storyBox {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  background: var(--light-gray);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+}
+
+/* ─── Values ─────────────────── */
+.values {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.valuesHeader { text-align: center; margin-bottom: 3rem; }
+
+.valuesTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--black);
+}
+
+.valuesTitle span { color: var(--gold); }
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.valueCard {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid var(--light-gray);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.valueCard:hover {
+  box-shadow: 0 12px 40px rgba(201,164,101,0.12);
+  transform: translateY(-4px);
+}
+
+.valueIcon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+.valueName {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.valueDesc {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* ─── Team ─────────────────── */
+.team {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.teamHeader { text-align: center; margin-bottom: 3rem; }
+
+.teamTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--black);
+}
+
+.teamTitle span { color: var(--gold); }
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.teamCard {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto 1rem;
+  border: 2px solid rgba(201,164,101,0.3);
+}
+
+.memberName {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.3rem;
+}
+
+.memberRole {
+  font-size: 0.8rem;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* ─── Contact ─────────────────── */
+.contact { padding: 5rem 0; }
+
+.contactHeader { text-align: center; margin-bottom: 3rem; }
+
+.contactTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--black);
+}
+
+.contactTitle span { color: var(--gold); }
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contactCard {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 16px;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.contactCard:hover {
+  box-shadow: 0 12px 40px rgba(201,164,101,0.12);
+  transform: translateY(-4px);
+}
+
+.contactIcon {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.contactLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.contactText {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.contactLink {
+  color: var(--gray);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.contactLink:hover { color: var(--gold); }
+
+@media (max-width: 1024px) {
+  .valuesGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .wrapper { padding: 0 1.25rem; }
+  .story { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 0; }
+  .storyVisual { display: none; }
+  .values, .team, .contact { padding: 3rem 0; }
+  .teamGrid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .contactGrid { grid-template-columns: 1fr; max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .valuesGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .wrapper { padding: 0 1rem; }
+  .story, .values, .team, .contact { padding: 2.5rem 0; }
+  .teamGrid { grid-template-columns: 1fr; }
+  .valueCard { padding: 1.5rem 1rem; }
+  .contactCard { padding: 1.5rem 1rem; }
+  .storyTitle { font-size: clamp(1.5rem, 6vw, 1.9rem); }
+}

@@ -1,0 +1,179 @@
+/* ── LAYOUT ─────────────────────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 5rem;
+  align-items: start;
+}
+
+/* ── STICKY SIDEBAR ─────────────────────────────────── */
+.sidebar {
+  position: sticky;
+  top: calc(var(--nav-h) + 1.2rem);
+  background: #fff;
+  border: 1.5px solid var(--light-gray);
+  border-radius: 14px;
+  padding: 1.4rem 1.2rem;
+  max-height: calc(100vh - var(--nav-h) - 2.5rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--light-gray); border-radius: 4px; }
+
+.sideHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1.5px solid var(--light-gray);
+}
+
+.sideTitle {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.03em;
+}
+
+.clearBtn {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--gold);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.15s;
+}
+.clearBtn:hover { opacity: 0.7; }
+
+/* ── FILTER SECTIONS ────────────────────────────────── */
+.section {
+  margin-bottom: 1.4rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+.section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.secLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 0.75rem;
+}
+
+.radioRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--gray);
+  cursor: pointer;
+  margin-bottom: 0.45rem;
+  transition: color 0.15s;
+}
+.radioRow:hover { color: var(--gold); }
+
+.radio { accent-color: var(--gold); width: 14px; height: 14px; cursor: pointer; }
+
+/* Size grid */
+.sizeGrid { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.sizeBtn {
+  padding: 0.28rem 0.7rem;
+  border: 1.5px solid var(--light-gray);
+  border-radius: 6px;
+  background: transparent;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.sizeBtn:hover { border-color: var(--gold); color: var(--gold); }
+.sizeBtnOn { border-color: var(--gold); background: var(--gold); color: #fff; }
+
+/* ── MAIN AREA ───────────────────────────────────────── */
+.main { min-width: 0; }
+
+.resultsBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.resultCount {
+  font-size: 0.82rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.clearBtnSm {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray);
+  background: none;
+  border: 1px solid var(--light-gray);
+  border-radius: 20px;
+  padding: 0.3rem 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.clearBtnSm:hover { border-color: var(--gold); color: var(--gold); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Empty state */
+.empty { text-align: center; padding: 5rem 2rem; }
+.emptyIcon { font-size: 3rem; margin-bottom: 1rem; }
+.emptyText { font-size: 0.95rem; color: var(--gray); margin-bottom: 1.2rem; }
+.emptyReset {
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  border: 1.5px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.emptyReset:hover { background: var(--gold); color: #fff; }
+
+/* ── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.2rem 4rem;
+  }
+  .sidebar {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
+@media (max-width: 600px) {
+  .layout { padding: 1.5rem 1rem 3rem; }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
+  .resultsBar { flex-wrap: wrap; gap: 0.5rem; }
+}
+
+@media (max-width: 380px) {
+  .grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+}

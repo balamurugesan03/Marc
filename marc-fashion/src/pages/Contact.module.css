@@ -1,0 +1,179 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.sideTitle {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 2rem;
+}
+
+/* ─── Form ─────────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.input {
+  border: 1.5px solid var(--light-gray);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--black);
+  background: var(--white);
+  outline: none;
+  transition: border-color var(--transition);
+  width: 100%;
+}
+
+.input:focus { border-color: var(--gold); }
+.input::placeholder { color: var(--gray); }
+
+.textarea { resize: vertical; min-height: 130px; }
+
+.submitBtn {
+  background: var(--gold);
+  color: var(--white);
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  align-self: flex-start;
+}
+
+.submitBtn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.success {
+  background: rgba(201,164,101,0.1);
+  border: 1.5px solid var(--gold);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+  color: var(--black);
+  font-family: var(--font-serif);
+}
+
+/* ─── Info Side ─────────────── */
+.infoSide { }
+
+.infoCard {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.infoCard:last-child { border-bottom: none; }
+
+.infoIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: var(--light-gray);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+.infoText {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.infoLink {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.infoLink:hover { opacity: 0.7; }
+
+/* ─── Map ───────────────────── */
+.mapWrap {
+  margin-top: 3rem;
+}
+
+.mapLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.mapFrame {
+  width: 100%;
+  height: 320px;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .wrapper { padding: 3rem 1.25rem 4rem; }
+  .grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .wrapper { padding: 2rem 1rem 3rem; }
+  .sideTitle { font-size: 1.3rem; }
+  .submitBtn { width: 100%; text-align: center; }
+  .input, .textarea { font-size: 16px; }
+}

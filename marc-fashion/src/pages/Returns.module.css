@@ -1,0 +1,253 @@
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+}
+
+/* ─── Intro ─────────────────── */
+.intro {
+  padding: 3.5rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.introBadge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1.2rem;
+}
+
+.introText {
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ─── Steps ─────────────────── */
+.steps {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  color: var(--black);
+}
+
+.sectionTitle span { color: var(--gold); }
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+}
+
+.stepCard {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.stepCard:hover {
+  box-shadow: 0 10px 35px rgba(201,164,101,0.12);
+  transform: translateY(-3px);
+}
+
+.stepIcon { font-size: 2rem; margin-bottom: 0.6rem; }
+
+.stepNum {
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.stepTitle {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.6rem;
+}
+
+.stepDesc {
+  font-size: 0.81rem;
+  color: var(--gray);
+  line-height: 1.65;
+}
+
+/* ─── Eligibility ─────────────────── */
+.eligibility {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.eligibilityGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.eligibleBox,
+.notEligibleBox {
+  border-radius: 14px;
+  padding: 2rem;
+  border: 1px solid var(--light-gray);
+}
+
+.eligibleBox { background: #f6fdf7; border-color: #c3e6cb; }
+.notEligibleBox { background: #fff8f8; border-color: #f5c6cb; }
+
+.boxHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.boxIcon { font-size: 1.4rem; }
+
+.boxTitle {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.86rem;
+  color: var(--gray);
+  line-height: 1.55;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #28a745;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.dotRed { background: #dc3545; }
+
+/* ─── FAQ ─────────────────── */
+.faq {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.faqCard {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 14px;
+  padding: 1.75rem;
+  transition: box-shadow var(--transition);
+}
+
+.faqCard:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.06); }
+
+.faqQ {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.faqA {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+/* ─── CTA ─────────────────── */
+.cta {
+  margin-top: 4rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.ctaText {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 1.5rem;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--white);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.85rem 2.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.ctaBtn:hover { opacity: 0.88; transform: translateY(-2px); }
+
+/* ─── Responsive ─────────────────── */
+@media (max-width: 900px) {
+  .stepsGrid { grid-template-columns: repeat(2, 1fr); }
+  .faqGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .stepsGrid { grid-template-columns: 1fr; }
+  .eligibilityGrid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,223 @@
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(201, 164, 101, 0.15);
+}
+
+.imageArea {
+  position: relative;
+  aspect-ratio: 3/4;
+  background: var(--light-gray);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.emojiPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5.5rem;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .emojiPlaceholder {
+  transform: scale(1.12);
+}
+
+.card:hover .imageArea .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 14, 14, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.quickView {
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.quickView:hover {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.productImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 50px;
+  z-index: 2;
+}
+
+.badgeNew {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.badgeSale {
+  background: #e74c3c;
+  color: var(--white);
+}
+
+.wishBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background var(--transition), transform var(--transition);
+  z-index: 2;
+}
+
+.wishBtn:hover {
+  background: var(--white);
+  transform: scale(1.15);
+}
+
+.wishBtn.active {
+  background: #ffe4e4;
+}
+
+.body {
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+.category {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.35rem;
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.swatches {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+
+.swatch:hover { transform: scale(1.2); }
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  color: var(--gray);
+  margin-bottom: 0.7rem;
+}
+
+.stars { color: #F4B400; font-size: 0.8rem; }
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.price {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.oldPrice {
+  font-size: 0.85rem;
+  color: var(--gray);
+  text-decoration: line-through;
+  margin-left: 0.3rem;
+}
+
+.addBtn {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: background var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+
+.addBtn:hover {
+  background: var(--gold);
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .body { padding: 0.75rem 0.85rem 0.9rem; }
+  .name { font-size: 0.88rem; }
+  .price { font-size: 0.95rem; }
+  .addBtn { padding: 0.45rem 0.7rem; font-size: 0.66rem; }
+}

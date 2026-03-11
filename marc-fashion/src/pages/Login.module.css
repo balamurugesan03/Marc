@@ -1,0 +1,231 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: var(--nav-h);
+}
+
+/* ─── Left panel ─────────────────── */
+.left {
+  background: #080808;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201,164,101,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,164,101,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.leftContent {
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+}
+
+.brand {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.decorLine {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin-bottom: 1.8rem;
+}
+
+.perks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.perk {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.perkDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ─── Right panel ─────────────────── */
+.right {
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 0.88rem;
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+
+.errorBox {
+  background: #fff0f0;
+  border: 1px solid #f5c6cb;
+  color: #c0392b;
+  font-size: 0.83rem;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.2rem;
+}
+
+/* ─── Form ─────────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.input {
+  border: 1.5px solid var(--light-gray);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--black);
+  background: var(--white);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.input:focus { border-color: var(--gold); }
+.input::placeholder { color: #bbb; }
+
+.btn {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 0.95rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--gold);
+  transform: translateY(-1px);
+}
+
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: var(--white);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.footer {
+  font-size: 0.83rem;
+  color: var(--gray);
+  text-align: center;
+}
+
+.link {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ─── Responsive ─────────────────── */
+@media (max-width: 768px) {
+  .page { grid-template-columns: 1fr; }
+  .left { display: none; }
+  .right { padding: 3rem 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .right { padding: 2rem 1rem; }
+  .title { font-size: 1.6rem; }
+  .input { font-size: 16px; }
+  .btn { padding: 0.9rem; }
+  .card { max-width: 100%; }
+}

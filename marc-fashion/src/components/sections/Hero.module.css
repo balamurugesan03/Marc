@@ -1,0 +1,50 @@
+.heroBanner {
+  width: 100%;
+  height: calc(100svh - var(--nav-h, 114px));
+  margin-top: var(--nav-h, 114px);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroLogo {
+  width: 60%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .heroBanner {
+    height: calc(100svh - 162px);
+    margin-top: 162px;
+  }
+  .heroLogo {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroBanner {
+    height: calc(100svh - 146px);
+    margin-top: 146px;
+  }
+  .heroLogo {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .heroBanner {
+    height: calc(100svh - 162px);
+    margin-top: 162px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroBanner {
+    height: calc(100svh - 146px);
+    margin-top: 146px;
+  }
+}

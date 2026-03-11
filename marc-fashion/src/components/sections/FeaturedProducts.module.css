@@ -1,0 +1,107 @@
+.section {
+  padding: 7rem 2rem;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ─── Header ─────────────────── */
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.label { margin-bottom: 0.8rem; }
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.title span { color: var(--gold); font-style: italic; }
+
+.headerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.2rem;
+  max-width: 340px;
+  text-align: right;
+}
+
+.subText {
+  font-size: 0.83rem;
+  color: var(--black);
+  line-height: 1.75;
+}
+
+/* ─── Grid ─────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+/* skeletons */
+.loading {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.skeleton {
+  height: 420px;
+  background: linear-gradient(90deg, #e8e8e8 25%, #f4f4f4 50%, #e8e8e8 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 0;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+/* ─── Responsive ─────────────────── */
+@media (max-width: 1200px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .loading { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 4rem 1.5rem; }
+  .header { flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 2rem; }
+  .headerRight { align-items: flex-start; text-align: left; max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .loading { grid-template-columns: repeat(2, 1fr); }
+  .skeleton { height: 280px; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 3rem 1rem; }
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 0; }
+}

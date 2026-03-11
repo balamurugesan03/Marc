@@ -1,0 +1,44 @@
+.wrapper {
+  padding: 3rem 2rem 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 0.5rem 1.3rem;
+  border-radius: 50px;
+  border: 1.5px solid var(--light-gray);
+  background: transparent;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--gray);
+  transition: all var(--transition);
+}
+
+.filterBtn:hover,
+.filterBtn.active {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--gray);
+  font-size: 1.1rem;
+  grid-column: 1 / -1;
+}

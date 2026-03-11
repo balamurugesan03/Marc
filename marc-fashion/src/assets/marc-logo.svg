@@ -1,0 +1,20 @@
+<svg width="320" height="100" viewBox="0 0 320 100" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+  <style>
+    /* Using a generic sans-serif for broad compatibility. Bold is applied via font-weight. */
+    .logo-font { font: 700 80px sans-serif; }
+  </style>
+
+  <!-- M -->
+  <text x="0" y="85" class="logo-font">M</text>
+
+  <!-- A (as a triangle path for sharp, clean lines) -->
+  <!-- Path: Move to bottom-left, Line to top-center, Line to bottom-right -->
+  <path d="M 90 85 L 125 10 L 160 85" stroke="#000000" stroke-width="15" fill="none" stroke-linejoin="miter" stroke-linecap="butt"/>
+
+  <!-- R -->
+  <text x="175" y="85" class="logo-font">R</text>
+
+  <!-- C -->
+  <text x="250" y="85" class="logo-font">C</text>
+
+</svg>
