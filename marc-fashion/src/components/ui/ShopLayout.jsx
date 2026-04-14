@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import ProductCard from "./ProductCard";
 import styles from "./ShopLayout.module.css";
 
-const ADULT_SIZES    = ["XS", "S", "M", "L", "XL", "XXL"];
+const ADULT_SIZES    = ["XS", "S", "M", "L", "XL", "XXL", "XXXL", "4XL", "5XL", "6XL"];
 const KIDS_SIZES     = ["2–3Y", "4–5Y", "6–7Y", "8–9Y", "10–11Y"];
 const FOOTWEAR_SIZES = ["UK 4", "UK 5", "UK 6", "UK 7", "UK 8", "UK 9", "UK 10", "UK 11"];
 const TOY_SIZES      = ["3–5Y", "5–8Y", "8–12Y", "12Y+", "All Ages"];

@@ -7,7 +7,11 @@ const MEN_SIZES = [
   { size: "M",  chest: "38–40", waist: "32–34", hip: "38–40", shoulder: "18.5" },
   { size: "L",  chest: "40–42", waist: "34–36", hip: "40–42", shoulder: "19.5" },
   { size: "XL", chest: "42–44", waist: "36–38", hip: "42–44", shoulder: "20.5" },
-  { size: "XXL",chest: "44–46", waist: "38–40", hip: "44–46", shoulder: "21.5" },
+  { size: "XXL", chest: "44–46", waist: "38–40", hip: "44–46", shoulder: "21.5" },
+  { size: "XXXL",chest: "46–48", waist: "40–42", hip: "46–48", shoulder: "22.5" },
+  { size: "4XL", chest: "48–50", waist: "42–44", hip: "48–50", shoulder: "23.5" },
+  { size: "5XL", chest: "50–52", waist: "44–46", hip: "50–52", shoulder: "24.5" },
+  { size: "6XL", chest: "52–54", waist: "46–48", hip: "52–54", shoulder: "25.5" },
 ];
 
 const WOMEN_SIZES = [

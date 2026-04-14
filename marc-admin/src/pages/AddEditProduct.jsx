@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import api from "../api/axios";
 
-const ADULT_SIZES = ["XS", "S", "M", "L", "XL", "XXL"];
+const ADULT_SIZES = ["XS", "S", "M", "L", "XL", "XXL", "XXXL", "4XL", "5XL", "6XL"];
 const KIDS_SIZE_GROUPS = [
   { label: "Infant",  sizes: ["0-3M", "3-6M", "6-9M", "9-12M"] },
   { label: "Toddler", sizes: ["1-2Y", "2-3Y", "3-4Y"] },

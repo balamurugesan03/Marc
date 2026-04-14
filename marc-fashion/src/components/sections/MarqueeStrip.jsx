@@ -4,7 +4,7 @@ const ROW1 = [
   "Free Shipping Over ₹1,500",
   "New Arrivals Weekly",
   "Premium Quality Fabrics",
-  "Easy 30-Day Returns",
+  "Easy 3-Day Returns",
   "Curated Family Collections",
   "Exclusive Member Offers",
 ];

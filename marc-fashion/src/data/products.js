@@ -1,4 +1,4 @@
-const ADULT_SIZES = ["XS", "S", "M", "L", "XL", "XXL"];
+const ADULT_SIZES = ["XS", "S", "M", "L", "XL", "XXL", "XXXL", "4XL", "5XL", "6XL"];
 const KIDS_SIZES = ["2-3Y", "4-5Y", "6-7Y", "8-9Y", "10-11Y"];
 
 export const products = [

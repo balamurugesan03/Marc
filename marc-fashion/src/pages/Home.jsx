@@ -3,6 +3,7 @@ import MarqueeStrip from "../components/sections/MarqueeStrip";
 import FeaturedProducts from "../components/sections/FeaturedProducts";
 import { Link } from "react-router-dom";
 import ShopImg from "../assets/shopimge2.jpg";
+import MarcLogo from "../assets/name.png-removebg-preview.png";
 
 const CONTACT_ITEMS = [
   {
@@ -14,8 +15,8 @@ const CONTACT_ITEMS = [
   {
     icon: "💬",
     label: "WhatsApp",
-    lines: ["+91 9633 633 733", "+91 7907 858 891"],
-    hrefs: ["https://wa.me/919633633733", "https://wa.me/917907858891"],
+    lines: ["+91 7907 858 891", "+91 9633 633 733"],
+    hrefs: ["https://wa.me/917907858891", "https://wa.me/919633633733"],
   },
   {
     icon: "✉️",
@@ -39,28 +40,53 @@ export default function Home() {
             <img src={ShopImg} alt="MARC Shop" style={{ width: '100%', maxWidth: '700px', margin: '0 auto 2rem', display: 'block', borderRadius: '12px', objectFit: 'cover' }} />
             <p style={cs.eyebrow}>Find Us</p>
             <h2 style={cs.title}>
-              Come Visit <span style={cs.accent}>MARC</span>
+              Come Visit{" "}
+              <img src={MarcLogo} alt="MARC" style={cs.marcLogo} />
             </h2>
           </div>
 
-          <div style={cs.grid}>
-            {CONTACT_ITEMS.map((item) => (
-              <div key={item.label} style={cs.card}>
-                <div style={cs.iconBox}>{item.icon}</div>
-                <div style={cs.cardLabel}>{item.label}</div>
-                <div style={cs.cardText}>
-                  {item.lines.map((line, i) =>
-                    item.hrefs ? (
-                      <a key={i} href={item.hrefs[i]} style={cs.link} target="_blank" rel="noreferrer">
-                        {line}
-                      </a>
-                    ) : (
-                      <span key={i}>{line}</span>
-                    )
-                  )}
+          {/* Side-by-side: cards + map */}
+          <div style={cs.twoCol}>
+            {/* Left — contact cards */}
+            <div style={cs.cardsCol}>
+              {CONTACT_ITEMS.map((item) => (
+                <div key={item.label} style={cs.card}>
+                  <div style={cs.iconBox}>{item.icon}</div>
+                  <div style={cs.cardLabel}>{item.label}</div>
+                  <div style={cs.cardText}>
+                    {item.lines.map((line, i) =>
+                      item.hrefs ? (
+                        <a key={i} href={item.hrefs[i]} style={cs.link} target="_blank" rel="noreferrer">
+                          {line}
+                        </a>
+                      ) : (
+                        <span key={i}>{line}</span>
+                      )
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Right — map */}
+            <div style={cs.mapCol}>
+              <iframe
+                title="MARC Store Location"
+                src="https://maps.google.com/maps?q=MARC+THE+FAMILY+FASHION+near+Vellayani+Junction+Nemom+Kerala+695020&output=embed"
+                style={cs.mapFrame}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <a
+                href="https://maps.app.goo.gl/dh732CUggYGyLGgA8"
+                target="_blank"
+                rel="noreferrer"
+                style={cs.directionsBtn}
+              >
+                Get Directions →
+              </a>
+            </div>
           </div>
 
           <div style={cs.cta}>
@@ -101,11 +127,48 @@ const cs = {
     lineHeight: 1.2,
   },
   accent: { color: "#C9A465" },
-  grid: {
+  marcLogo: {
+    height: "clamp(3.5rem, 7vw, 5.5rem)",
+    width: "auto",
+    objectFit: "contain",
+    verticalAlign: "middle",
+    display: "inline-block",
+  },
+  twoCol: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-    gap: "1.5rem",
+    gridTemplateColumns: "1fr 1fr",
+    gap: "2rem",
     marginBottom: "2.5rem",
+    alignItems: "stretch",
+  },
+  cardsCol: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "1rem",
+  },
+  mapCol: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "0.75rem",
+  },
+  mapFrame: {
+    width: "100%",
+    flex: 1,
+    minHeight: "280px",
+    border: "none",
+    borderRadius: "16px",
+  },
+  directionsBtn: {
+    display: "inline-block",
+    padding: "0.6rem 1.4rem",
+    background: "#C9A465",
+    color: "#111",
+    borderRadius: "50px",
+    fontWeight: 700,
+    fontSize: "0.82rem",
+    letterSpacing: "0.05em",
+    textDecoration: "none",
+    alignSelf: "flex-start",
   },
   card: {
     background: "rgba(255,255,255,0.04)",

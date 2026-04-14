@@ -143,10 +143,20 @@ export default function Contact() {
 
         {/* Google Map */}
         <div className={styles.mapWrap}>
-          <div className={styles.mapLabel}>📍 Find Us on the Map</div>
+          <div className={styles.mapLabelRow}>
+            <div className={styles.mapLabel}>📍 Find Us on the Map</div>
+            <a
+              href="https://maps.app.goo.gl/dh732CUggYGyLGgA8"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.directionsBtn}
+            >
+              Get Directions →
+            </a>
+          </div>
           <iframe
             title="MARC Store Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.9!2d76.9355!3d8.4855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bec1b99b3a9f%3A0x7b0e1a2c3d4e5f6a!2sVellayani%20Junction%2C%20Nemom%2C%20Thiruvananthapuram%2C%20Kerala%20695020!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            src="https://maps.google.com/maps?q=MARC+THE+FAMILY+FASHION+near+Vellayani+Junction+Nemom+Kerala+695020&output=embed"
             className={styles.mapFrame}
             allowFullScreen=""
             loading="lazy"

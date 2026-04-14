@@ -6,7 +6,7 @@ const STEPS = [
     step: "01",
     icon: "📦",
     title: "Initiate Your Return",
-    desc: "Contact our support team via the Contact page or email returns@marc.com within 30 days of delivery. Include your order number and reason for return.",
+    desc: "Contact our support team via the Contact page or email returns@marc.com within 3 days of delivery. Include your order number and reason for return.",
   },
   {
     step: "02",
@@ -22,33 +22,30 @@ const STEPS = [
   },
   {
     step: "04",
-    icon: "💳",
-    title: "Refund Processed",
-    desc: "Once inspected and approved, your refund is issued within 5–7 business days to your original payment method.",
+    icon: "🔄",
+    title: "Exchange Dispatched",
+    desc: "Once the returned item is inspected and approved, your exchange item is dispatched within 2–3 business days.",
   },
 ];
 
 const ELIGIBLE = [
   "Unworn and unwashed items",
   "Original tags still attached",
-  "Returned within 30 days of delivery",
+  "Returned within 3 days of delivery",
   "Items in original, undamaged packaging",
   "Accompanied by your order confirmation",
 ];
 
 const NOT_ELIGIBLE = [
   "Items marked 'Final Sale' or purchased during clearance",
-  "Swimwear and innerwear (for hygiene reasons)",
+  "Swimwear, innerwear and undergarments (for hygiene reasons)",
+  "Toys (non-returnable once opened)",
   "Items showing signs of wear, wash, or alteration",
-  "Returns initiated after 30 days of delivery",
+  "Returns initiated after 3 days of delivery",
   "Gift cards and digital products",
 ];
 
 const FAQ = [
-  {
-    q: "How long does the refund take to appear?",
-    a: "After we receive and inspect your return (1–2 business days), refunds are processed within 5–7 business days. Depending on your bank, it may take an additional 2–3 days to reflect.",
-  },
   {
     q: "Can I exchange for a different size or colour?",
     a: "Yes. During the return initiation, select 'Exchange' and specify your preferred size or colour. Exchanges are dispatched once the original item is received.",
@@ -59,7 +56,11 @@ const FAQ = [
   },
   {
     q: "Is the return shipping free?",
-    a: "Returns are free for orders above ₹2,000. For orders below that threshold, a flat ₹99 return shipping fee is deducted from the refund.",
+    a: "Returns are free for orders above ₹2,000. For orders below that threshold, a flat ₹99 return shipping fee applies.",
+  },
+  {
+    q: "Do you offer refunds?",
+    a: "We do not offer refunds. All returns are processed as exchanges only. Please choose your size and colour carefully before placing an order.",
   },
 ];
 
@@ -72,10 +73,15 @@ export default function Returns() {
 
         {/* Policy Intro */}
         <section className={styles.intro}>
-          <div className={styles.introBadge}>30-Day Return Window</div>
+          <div className={styles.introBadgeRow}>
+            <div className={styles.introBadge}>3-Day Return Window</div>
+            <div className={styles.noRefundBadge}>❌ No Refunds — Exchange Only</div>
+            <div className={styles.noCodBadge}>🚫 COD Not Available</div>
+          </div>
           <p className={styles.introText}>
-            We want you to love everything you buy from MARC. If something isn't right, we make returns
-            simple, straightforward, and stress-free. Here's everything you need to know.
+            We want you to love everything you buy from MARC. If something isn't right, we offer hassle-free
+            exchanges within 3 days of delivery. Please note that we do not provide refunds — all approved
+            returns are processed as exchanges only. Cash on Delivery (COD) is not available on our store.
           </p>
         </section>
 

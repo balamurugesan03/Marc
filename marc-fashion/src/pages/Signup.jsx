@@ -64,7 +64,7 @@ export default function Signup() {
           </p>
           <div className={styles.decorLine} />
           <div className={styles.perks}>
-            {["Free returns within 30 days", "Exclusive member-only deals", "Track all your orders live"].map((p) => (
+            {["Free returns within 3 days", "Exclusive member-only deals", "Track all your orders live"].map((p) => (
               <div key={p} className={styles.perk}>
                 <span className={styles.perkDot} />
                 {p}

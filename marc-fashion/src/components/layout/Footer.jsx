@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logoImg from "../../assets/logo.jpeg";
+import logoImg from "../../assets/name.png-removebg-preview.png";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -12,7 +12,6 @@ export default function Footer() {
         <div className={styles.brand}>
           <div className={styles.logoRow}>
             <img src={logoImg} alt="MARC" className={styles.logoImg} />
-            <span className={styles.logoText}>MARC</span>
           </div>
           <p className={styles.tagline}>
             Curated fashion for the whole family — timeless style, modern comfort.
@@ -59,8 +58,8 @@ export default function Footer() {
             <li className={styles.contactItem}>
               <span className={styles.contactIcon}>💬</span>
               <span>
-                <a href="https://wa.me/919633633733" className={styles.colLink} target="_blank" rel="noreferrer">+91 9633 633 733</a><br />
-                <a href="https://wa.me/917907858891" className={styles.colLink} target="_blank" rel="noreferrer">+91 7907 858 891</a>
+                <a href="https://wa.me/917907858891" className={styles.colLink} target="_blank" rel="noreferrer">+91 7907 858 891</a><br />
+                <a href="https://wa.me/919633633733" className={styles.colLink} target="_blank" rel="noreferrer">+91 9633 633 733</a>
               </span>
             </li>
             <li className={styles.contactItem}>
